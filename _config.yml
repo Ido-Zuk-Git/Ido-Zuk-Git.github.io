@@ -1,0 +1,21 @@
+title: Ido Zuk — Math Notes
+description: A mathematical blog.
+author: Ido Zuk
+url: "https://ido-zuk-git.github.io"
+
+theme: minima
+markdown: kramdown
+
+# Leave kramdown's math untouched so MathJax handles all delimiters.
+kramdown:
+  math_engine: null
+
+plugins:
+  - jekyll-feed
+
+# Files Jekyll should not copy into the built site.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
