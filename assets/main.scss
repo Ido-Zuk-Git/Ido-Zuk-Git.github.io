@@ -15,6 +15,15 @@
 
   p { margin-bottom: 0.3rem; }
   ul { margin: 0 0 0 1rem; }
+
+  .avatar {
+    display: block;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 0.75rem;
+  }
 }
 
 // On wide screens, push the box out past the text column toward the page edge.
