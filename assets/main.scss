@@ -1,0 +1,22 @@
+---
+# Front matter required so Jekyll processes this SCSS.
+# Imports the minima theme, then adds our overrides below.
+---
+
+@import "minima";
+
+.social-links {
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid $grey-color-light;
+  border-radius: 6px;
+  font-size: 0.9rem;
+
+  p { margin-bottom: 0.3rem; }
+  ul { margin: 0 0 0 1rem; }
+}
+
+@media screen and (max-width: 600px) {
+  .social-links { float: none; margin: 0 0 1rem 0; }
+}
