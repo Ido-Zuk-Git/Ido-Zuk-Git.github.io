@@ -24,6 +24,21 @@
     border-radius: 50%;
     margin: 0 auto 0.75rem;
   }
+
+  .icon-row {
+    display: flex;
+    gap: 0.9rem;
+    margin: 0.4rem 0 0;
+
+    a { display: inline-flex; }
+    .brand-icon {
+      width: 26px;
+      height: 26px;
+      transition: transform 0.15s ease, opacity 0.15s ease;
+      opacity: 0.85;
+    }
+    a:hover .brand-icon { transform: translateY(-2px); opacity: 1; }
+  }
 }
 
 // On wide screens, push the box out past the text column toward the page edge.
