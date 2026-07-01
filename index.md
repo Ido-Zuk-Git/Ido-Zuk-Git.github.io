@@ -10,6 +10,10 @@ title: About
 
 - [LinkedIn](https://www.linkedin.com/in/ido-zuk-2a94541bb/)
 - [X](https://x.com/ido_zuk)
+
+**My publications from my physics days:**
+
+- [Google Scholar](https://scholar.google.com/citations?user=opXN_-gAAAAJ&hl=en)
 </aside>
 
 I'm a physicist turned AI researcher, turned Product Manager. What's next? Let's see.
