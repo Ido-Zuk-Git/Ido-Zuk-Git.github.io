@@ -5,6 +5,9 @@
 
 @import "minima";
 
+// Remove minima's "subscribe via RSS" line on the blog listing.
+.rss-subscribe { display: none; }
+
 .post-subtitle {
   font-size: 1.6rem;
   font-style: italic;
