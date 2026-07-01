@@ -1,4 +1,4 @@
-title: Ido Zuk — Math Notes
+title: Ido Zuk
 description: A mathematical blog.
 author: Ido Zuk
 url: "https://ido-zuk-git.github.io"
@@ -12,6 +12,10 @@ kramdown:
 
 plugins:
   - jekyll-feed
+
+# Nav bar: only show the Blog tab (root "/" is the About landing page).
+header_pages:
+  - blog.md
 
 # Files Jekyll should not copy into the built site.
 exclude:
