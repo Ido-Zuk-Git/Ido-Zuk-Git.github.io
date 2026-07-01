@@ -6,11 +6,11 @@ date: 2026-06-16 09:00:00 +0000
 canonical_url: "https://idozuk.substack.com/p/the-hgd-algorithm"
 ---
 
-*On the uphill battle toward local minima.*
+<p class="post-subtitle">On the uphill battle toward local minima.</p>
 
 *Originally published on [my Substack](https://idozuk.substack.com/p/the-hgd-algorithm).*
 
-Once a company has a working product in production, it is incredibly difficult to make choices that might degrade it. This is a direct consequence of loss aversion; the perceived risk of losing a customer due to a quality regression usually outweighs the potential gain of an unproven improvement.
+Once a company has a working product in production, it is incredibly difficult to make choices that might degrade it. This is a direct consequence of loss aversion[^1]; the perceived risk of losing a customer due to a quality regression usually outweighs the potential gain of an unproven improvement.
 
 Talking with many friends and colleagues in the AI industry in the last few months, I've noticed a recurring pattern that I call the **HGD (Human Gradient Descent)** algorithm. This is the manual, iterative process engineers and product managers use to nudge an AI agent toward a "better" state. A good example can be seen [here](https://aws.amazon.com/blogs/machine-learning/evaluate-conversational-ai-agents-with-amazon-bedrock/).
 
@@ -50,7 +50,7 @@ So, where is the problem? I claim this algorithm is bound to fail for three reas
 
 1. **Human Cognitive Limits:** Humans are generally poor at inferring accurate patterns from large datasets.
 
-2. **Ignoring Compounding Errors:** Conversations are processes where early actions fundamentally alter future states. If an agent makes a slightly sub-optimal choice at step 1, the distribution at step 5 is entirely different from what your regression tests expect. A well known result shows that the error in this case scales quadratically with the conversation length, rather than linearly.
+2. **Ignoring Compounding Errors:** Conversations are processes where early actions fundamentally alter future states. If an agent makes a slightly sub-optimal choice at step 1, the distribution at step 5 is entirely different from what your regression tests expect. A well known result[^2] shows that the error in this case scales quadratically with the conversation length, rather than linearly.
 
 3. **Local Minima and Learning Rate Decay:** This algorithm will, with high probability, get stuck in a local minima. It will never reach the performance of an optimal agent, and will likely settle very far from it. More interestingly, this process actually becomes _worse_ as you collect more data.
 
@@ -62,7 +62,7 @@ The third point is straightforward: because the algorithm is "ever-improving on 
 
 ![Cost function with a local-minima valley]({{ "/assets/img/posts/hgd-cost-function.jpg" | relative_url }})
 
-With high probability, the agent cannot escape this valley. To reach a better global minimum, the agent would likely need to "ruin" a large number of currently "good" examples to explore a better policy. Since the HGD algorithm (via regression tests) forbids any degradation, you are essentially locked into your initial, sub-optimal path. This is somewhat the opposite of how we would like to design systems that learn continuously, as we want the agent to learn new tasks. Moreover, the more data you add, the more regression tests you accumulate. These tests act as a massive anchor on the optimization process.
+With high probability, the agent cannot escape this valley. To reach a better global minimum, the agent would likely need to "ruin" a large number of currently "good" examples to explore a better policy. Since the HGD algorithm (via regression tests) forbids any degradation, you are essentially locked into your initial, sub-optimal path. This is somewhat the opposite[^3] of how we would like to design systems that learn continuously, as we want the agent to learn new tasks. Moreover, the more data you add, the more regression tests you accumulate. These tests act as a massive anchor on the optimization process.
 
 The space of allowed changes to the agent's policy is constantly shrinking. Every new test is a new constraint. Over time, it becomes increasingly difficult for a human to find a "gradient" (a prompt change or a rule update) that actually improves the agent while passing every single existing regression test. Eventually, the "Human Gradient Descent" grinds to a halt.
 
@@ -139,3 +139,9 @@ $$
 $$
 
 This implies that the more "good" examples (regression tests) we collect, the smaller $\epsilon$ becomes, meaning the learning rate in the orthogonal direction actively diminishes.
+
+[^1]: [Prospect theory](https://en.wikipedia.org/wiki/Prospect_theory) (Wikipedia).
+
+[^2]: Ross, Gordon & Bagnell, [*A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning*](https://proceedings.mlr.press/v9/ross10a/ross10a.pdf) (DAgger).
+
+[^3]: Kirkpatrick et al., [*Overcoming Catastrophic Forgetting in Neural Networks*](https://arxiv.org/pdf/1612.00796) (EWC).
