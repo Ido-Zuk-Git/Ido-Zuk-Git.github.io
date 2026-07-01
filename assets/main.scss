@@ -17,6 +17,11 @@
   ul { margin: 0 0 0 1rem; }
 }
 
+// On wide screens, push the box out past the text column toward the page edge.
+@media screen and (min-width: 1000px) {
+  .social-links { margin-right: -7rem; }
+}
+
 @media screen and (max-width: 600px) {
   .social-links { float: none; margin: 0 0 1rem 0; }
 }
