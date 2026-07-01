@@ -4,7 +4,7 @@ title: About
 ---
 
 <aside class="social-links" markdown="1">
-![Ido Zuk]({{ "/assets/img/ido.jpeg" | relative_url }}){:.avatar}
+![Ido Zuk]({{ "/assets/img/ido-avatar.jpg" | relative_url }}){:.avatar}
 
 **Find me**
 

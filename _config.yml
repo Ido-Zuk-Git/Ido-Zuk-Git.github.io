@@ -23,3 +23,4 @@ exclude:
   - Gemfile.lock
   - README.md
   - vendor
+  - assets/img/ido.jpeg  # full-res master; only the cropped avatar is published
