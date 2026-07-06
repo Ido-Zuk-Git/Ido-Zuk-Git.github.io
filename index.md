@@ -22,7 +22,7 @@ title: About
 </p>
 </aside>
 
-I'm a physicist turned AI researcher, turned Product Manager. What's next? Let's see.
+I'm a physicist turned AI researcher, turned product manager. What's next? Let's see.
 
 I believe that physics gives you the best mental models to solve problems, and I try to apply this thinking to many other fields.
 
