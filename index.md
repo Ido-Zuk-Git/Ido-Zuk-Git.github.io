@@ -28,10 +28,6 @@ I believe that physics gives you the best mental models to solve problems, and I
 
 My current interests are how to make autonomous agents work in unpredictable environments, continual learning, and human modeling.
 
-The latter asks a fundamental question: how can we predict what a human will do, and what is the simplest model that describes it
-
-(And by "simple," I mean it might still take a trillion-parameter neural net!). Today's AI systems are inflated with bias and by no 
-
-means model true human behavior. Solving that will be incredibly valuable.
+The latter asks a fundamental question: how can we predict what a human will do, and what is the simplest model that describes it? (And by "simple," I mean it might still take a trillion-parameter neural net!). Today's AI systems are inflated with bias and by no means model true human behavior. Solving that will be incredibly valuable.
 
 [This blog](/blog/) is a collection of my recent thoughts. Feel free to reach out!
